@@ -27,8 +27,10 @@ nav a:hover{color:var(--gold)}
 button.sw{cursor:pointer;border:1.5px solid var(--gold);background:transparent;color:var(--gold);padding:7px 14px;border-radius:99px;font:600 .8rem "Space Grotesk",sans-serif;transition:.3s}
 button.sw:hover{background:var(--gold);color:var(--bg);transform:rotate(-3deg) scale(1.06)}
 .hero{min-height:100vh;display:grid;align-content:center;padding:120px 5vw 60px;position:relative}
-.hero h1{font-size:clamp(3.6rem,14vw,12rem);font-weight:900;letter-spacing:-.04em;background:linear-gradient(100deg,var(--ink),var(--gold),var(--accent),var(--gold),var(--ink));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 7s linear infinite}
-.hero h1 span{display:inline-block;animation:rise .9s cubic-bezier(.2,.9,.2,1) both}
+.hero h1{font-size:clamp(3.6rem,14vw,12rem);font-weight:900;letter-spacing:-.04em;color:var(--gold)}
+.hero h1 span{display:inline-block;color:var(--gold);animation:rise .9s cubic-bezier(.2,.9,.2,1) both}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){.hero h1 span{background:linear-gradient(100deg,var(--ink),var(--gold),var(--accent),var(--gold),var(--ink));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:rise .9s cubic-bezier(.2,.9,.2,1) both,sheen 7s linear infinite}}
+.hero h1 .pb{display:block;font-size:.32em;letter-spacing:.3em;margin-top:10px}
 @keyframes rise{from{transform:translateY(110%) rotate(8deg);opacity:0}}
 @keyframes sheen{to{background-position:300% 0}}
 .role{font:italic 600 clamp(1.3rem,3.4vw,2.6rem) Fraunces,serif;color:var(--gold);margin-top:22px;min-height:1.3em}
@@ -91,7 +93,7 @@ footer small{color:var(--mute);display:block;margin-top:40px}
 <nav><b>APB</b><div><a href="#work">Work</a><a href="#skills">Skills</a><a href="#path">Path</a><a href="#hire">Contact</a><button class="sw" id="sw" aria-label="Switch colour palette">Palette: Mocha</button></div></nav>
 <header class="hero">
   <div class="spin" aria-hidden="true"></div>
-  <h1 aria-label="Abhinav P B"><span style="animation-delay:.05s">A</span><span style="animation-delay:.12s">b</span><span style="animation-delay:.19s">h</span><span style="animation-delay:.26s">i</span><span style="animation-delay:.33s">n</span><span style="animation-delay:.4s">a</span><span style="animation-delay:.47s">v</span></h1>
+  <h1 aria-label="Abhinav P B"><span style="animation-delay:.05s">A</span><span style="animation-delay:.12s">b</span><span style="animation-delay:.19s">h</span><span style="animation-delay:.26s">i</span><span style="animation-delay:.33s">n</span><span style="animation-delay:.4s">a</span><span style="animation-delay:.47s">v</span><span class="pb" style="animation-delay:.6s">P B</span></h1>
   <p class="role"><span id="typed"></span><i></i></p>
   <p class="lede">B.Sc. Computer Science (Honours) student at the University of Calicut, graduating 2027. I write Python, C and Java, and I like finding a new way to do things the old way already did.</p>
   <div class="cta"><a class="btn" href="#work">See what I’ve built</a><a class="btn o" href="#hire">Get in touch</a></div>
@@ -120,7 +122,7 @@ footer small{color:var(--mute);display:block;margin-top:40px}
       <h3>VELORA Fragrance Survey</h3>
       <p>A landing page for a fragrance brand idea, with a short survey to find out which scents young people like most. Votes show up as live results.</p>
       <span class="tag">Full-stack</span><span class="tag">Survey</span><span class="tag">Landing page</span>
-      <p style="margin-top:14px"><a href="https://abhinavabhi809.github.io/velora-perfume/" target="_blank" rel="noopener" style="color:var(--gold)">Open the survey</a></p>
+      <p style="margin-top:14px"><a href="https://claude.ai/artifact/JoRcMBER4qPP53VJLjdWns" target="_blank" rel="noopener" style="color:var(--gold)">Open the survey</a></p>
     </article>
     <article class="card reveal">
       <h3>Face Attendance System</h3>
