@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Abhinav P B — Portfolio</title>
+<title>Abhinav P B — Portfolio (Centred)</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,900;1,9..144,600&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#1e120b;--bg2:#2e1c12;--ink:#f7e7ce;--gold:#e3bf7a;--accent:#cc5500;--glow:#cc550066;--mute:#b9a58b;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -26,8 +26,8 @@ nav a{color:var(--ink);text-decoration:none;font-size:.9rem}
 nav a:hover{color:var(--gold)}
 button.sw{cursor:pointer;border:1.5px solid var(--gold);background:transparent;color:var(--gold);padding:7px 14px;border-radius:99px;font:600 .8rem "Space Grotesk",sans-serif;transition:.3s}
 button.sw:hover{background:var(--gold);color:var(--bg);transform:rotate(-3deg) scale(1.06)}
-.hero{min-height:100vh;display:grid;align-content:center;padding:120px 5vw 60px;position:relative}
-.hero h1{font-size:clamp(3.6rem,14vw,12rem);font-weight:900;letter-spacing:-.04em;color:var(--gold)}
+.hero{min-height:100vh;min-height:100svh;display:grid;align-content:center;justify-items:center;text-align:center;padding:90px 5vw 50px;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(2.8rem,16vw,11rem);line-height:1.15;padding-bottom:.05em;position:relative;font-weight:900;letter-spacing:-.04em;color:var(--gold)}
 .hero h1 span{display:inline-block;color:var(--gold);animation:rise .9s cubic-bezier(.2,.9,.2,1) both}
 @supports ((-webkit-background-clip:text) or (background-clip:text)){.hero h1 span{background:linear-gradient(100deg,var(--ink),var(--gold),var(--accent),var(--gold),var(--ink));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:rise .9s cubic-bezier(.2,.9,.2,1) both,sheen 7s linear infinite}}
 .hero h1 .pb{display:block;font-size:.32em;letter-spacing:.3em;margin-top:10px}
@@ -37,11 +37,11 @@ button.sw:hover{background:var(--gold);color:var(--bg);transform:rotate(-3deg) s
 .role i{display:inline-block;width:3px;height:1em;background:var(--accent);margin-left:6px;vertical-align:-.12em;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
 .lede{max-width:34em;color:var(--mute);margin-top:24px}
-.cta{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.cta{display:flex;justify-content:center;gap:14px;margin-top:32px;flex-wrap:wrap}
 .btn{padding:14px 26px;border-radius:99px;text-decoration:none;font-weight:600;color:var(--bg);background:linear-gradient(120deg,var(--gold),var(--accent));box-shadow:0 0 0 0 var(--glow);animation:pulse 2.4s infinite}
 .btn.o{background:none;color:var(--ink);border:1.5px solid var(--gold);animation:none}
 @keyframes pulse{70%{box-shadow:0 0 0 18px transparent}}
-.spin{position:absolute;right:6vw;top:22vh;width:min(30vw,300px);aspect-ratio:1;border:2px dashed var(--gold);border-radius:50%;animation:rot 30s linear infinite;opacity:.55;display:grid;place-items:center}
+.spin{position:absolute;left:50%;top:50%;width:min(86vw,560px);margin:calc(min(86vw,560px)/-2) 0 0 calc(min(86vw,560px)/-2);aspect-ratio:1;border:2px dashed var(--gold);border-radius:50%;animation:rot 30s linear infinite;opacity:.25;display:grid;place-items:center}
 .spin::before{content:"";width:68%;aspect-ratio:1;border:6px double var(--accent);border-radius:50%;animation:rot 12s linear infinite reverse}
 .spin::after{content:"</>";position:absolute;font:900 2.4rem Fraunces,serif;color:var(--gold);animation:rot 30s linear infinite reverse}
 @keyframes rot{to{transform:rotate(360deg)}}
@@ -84,7 +84,8 @@ footer h2{font-size:clamp(2.6rem,10vw,9rem)}
 footer a{color:var(--gold);font-size:1.3rem;display:block;margin:6px}
 footer small{color:var(--mute);display:block;margin-top:40px}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-@media(max-width:700px){.spin{display:none}}
+
+@media(max-width:520px){nav{padding:10px 4vw}nav div{gap:10px;flex-wrap:nowrap}nav a{font-size:.78rem}button.sw{padding:5px 9px;font-size:.68rem}nav b{font-size:1.1rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.bar u::after{width:var(--w)}}
 </style>
 </head>
@@ -92,8 +93,8 @@ footer small{color:var(--mute);display:block;margin-top:40px}
 <div class="blob b1"></div><div class="blob b2"></div><div id="glow"></div>
 <nav><b>APB</b><div><a href="#work">Work</a><a href="#skills">Skills</a><a href="#path">Path</a><a href="#hire">Contact</a><button class="sw" id="sw" aria-label="Switch colour palette">Palette: Mocha</button></div></nav>
 <header class="hero">
-  <div class="spin" aria-hidden="true"></div>
-  <h1 aria-label="Abhinav P B"><span style="animation-delay:.05s">A</span><span style="animation-delay:.12s">b</span><span style="animation-delay:.19s">h</span><span style="animation-delay:.26s">i</span><span style="animation-delay:.33s">n</span><span style="animation-delay:.4s">a</span><span style="animation-delay:.47s">v</span><span class="pb" style="animation-delay:.6s">P B</span></h1>
+  
+  <h1 aria-label="Abhinav P B"><span style="animation-delay:0.05s">A</span><span style="animation-delay:0.12s">b</span><span style="animation-delay:0.19s">h</span><span style="animation-delay:0.26s">i</span><span style="animation-delay:0.33s">n</span><span style="animation-delay:0.4s">a</span><span style="animation-delay:0.47s">v</span><span style="animation-delay:0.55s">&nbsp;</span><span style="animation-delay:0.62s">P</span><span style="animation-delay:0.7s">&nbsp;</span><span style="animation-delay:0.77s">B</span></h1>
   <p class="role"><span id="typed"></span><i></i></p>
   <p class="lede">B.Sc. Computer Science (Honours) student at the University of Calicut, graduating 2027. I write Python, C and Java, and I like finding a new way to do things the old way already did.</p>
   <div class="cta"><a class="btn" href="#work">See what I’ve built</a><a class="btn o" href="#hire">Get in touch</a></div>
@@ -109,7 +110,8 @@ footer small{color:var(--mute);display:block;margin-top:40px}
         <h3>CV Role Matcher</h3>
         <p>Upload your CV and get the job role that fits you best, plus a clear list of what to improve to get there. Built to help students see where they stand before they apply.</p>
         <span class="tag">Web app</span><span class="tag">CV analysis</span><span class="tag">Career guidance</span>
-        <p style="margin-top:14px"><a href="https://careerwise-seven.vercel.app/" target="_blank" rel="noopener" style="color:var(--gold)">Open the survey</a></p>
+                <p style="margin-top:14px"><a href="https://careerwise-seven.vercel.app/" target="_blank" rel="noopener" style="color:var(--gold)">Open the survey</a></p>
+
       </div>
       <div class="score" aria-label="Example of the kind of result it gives">
         <small style="color:var(--gold)">Example result</small>
